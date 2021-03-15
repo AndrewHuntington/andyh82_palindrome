@@ -34,6 +34,7 @@ $ irb
 >> phrase = "Madam, I'm Adam."
 >> phrase.palindrome?
 => true
+```
 
 ## Development
 
