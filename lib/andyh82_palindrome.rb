@@ -2,7 +2,7 @@
 
 require_relative "andyh82_palindrome/version"
 
-class String
+module Andyh82Palindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
     processed_content == processed_content.reverse
@@ -12,6 +12,14 @@ class String
 
     # Returns content for palindrome testing.
     def processed_content
-      scan(/[a-z]/i).join.downcase
+      to_s.scan(/[a-z1-9]/i).join.downcase
     end
+end
+
+class String
+  include Andyh82Palindrome
+end
+
+class Integer
+  include Andyh82Palindrome
 end
