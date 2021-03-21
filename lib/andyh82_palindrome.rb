@@ -5,7 +5,11 @@ require_relative "andyh82_palindrome/version"
 module Andyh82Palindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
-    processed_content == processed_content.reverse
+    if processed_content.empty? || !processed_content.match?(/\S/)
+      return false
+    else
+      processed_content == processed_content.reverse
+    end
   end
 
   private
